@@ -47,6 +47,7 @@ Disclaimer
 This tool is intended for educational purposes only.
 Do not scan systems without proper authorization.
 
-AUTHOR
-Saakshi Singh
+
+
+AUTHOR                                                                                                                      Saakshi Singh
 Btech 2nd year
