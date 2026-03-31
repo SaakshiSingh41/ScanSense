@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Scan Report</title>
+</head>
+
+<body>
+
+<h1>Scan Report</h1>
+
+<h3>Target:</h3>
+<p th:text="${target}"></p>
+
+<h2>Open Ports</h2>
+
+<table border="1">
+
+<tr>
+<th>Port</th>
+<th>Service</th>
+<th>Version</th>
+<th>Severity</th>
+<th>Risk</th>
+<th>Recommendation</th>
+</tr>
+
+<tr th:each="r : ${reports}">
+
+<td th:text="${r.port}"></td>
+<td th:text="${r.service}"></td>
+<td th:text="${r.version}"></td>
+<td th:text="${r.severity}"></td>
+<td th:text="${r.risk}"></td>
+<td th:text="${r.recommendation}"></td>
+
+</tr>
+
+</table>
+
+<br><br>
+
+<h2>Discovered Directories</h2>
+
+<p>
+Directory enumeration was performed using Gobuster.
+Hidden directories may expose sensitive files,
+configuration backups, or administrative panels.
+</p>
+
+<ul>
+
+<li th:each="d : ${directories}" th:text="${d}"></li>
+
+</ul>
+
+<br><br>
+
+<a href="/download">
+<button>Download Detailed Report</button>
+</a>
+
+<br><br>
+
+<a href="/">Run Another Scan</a>
+
+</body>
+
+</html>

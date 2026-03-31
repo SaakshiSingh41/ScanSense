@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>ScanSense - Nmap Report Generator</title>
+</head>
+
+<body>
+
+<h1>ScanSense Security Scanner</h1>
+
+<form action="/scan" method="post">
+
+<label>Enter Target (IP or Domain)</label>
+<br><br>
+
+<input type="text" name="target" placeholder="example.com" required>
+
+<br><br>
+
+<button type="submit">Start Scan</button>
+
+</form>
+
+</body>
+
+</html>
